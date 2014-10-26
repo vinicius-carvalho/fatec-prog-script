@@ -1,0 +1,78 @@
+{% extends 'base/base.html' %}
+{% block css %}
+    <link rel="stylesheet" href="/static/bootstrap/css/bootstrap-social.css"/>
+    <link rel="stylesheet" href="/static/font-awesome/css/font-awesome.min.css"/>
+    <link href="http://netdna.bootstrapcdn.com/bootstrap/3.0.1/css/bootstrap.min.css" rel="stylesheet">
+
+    <link rel="stylesheet" href="cssbbs/css.css">
+{% endblock %}
+{% block js %}
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <script src="/static/bootstrap/js/bootstrap.min.js"></script>
+    <script src="/static/bootstrap/js/bootstrap.js"></script>
+{% endblock %}
+
+{% block body %}
+    <br/>
+
+
+    <div class="container div-m ">
+        <div class="row clearfix co">
+            <div class="col-md-12 column well div-m">
+                <div class="jumbotron well">
+                    <h1>
+                        Cadastro de Observações
+                    </h1>
+
+                    <p>
+                        Este Aplicativo Web é para o profisional que atua na area da segurança do trabalho,
+                        funciona como um cadastro virtual de comportamentos inseguros, que será armazenado em um banco
+                        de dados para gerar relatórios de riscos no final um determinado periodo.
+                    </p>
+                </div>
+                <div class="row clearfix div-c">
+                    <div class="col-md-2 column">
+                        <img alt="epi" src="/static/img/epi.gif" class="img-circle m-l"/>
+                    </div>
+                    <div class="col-md-10 column well">
+                        <h2>
+                            Equipamentos de Segurança - EPI
+                        </h2>
+
+                        <p>
+                            Conheça os equipamentos de segurança como e onde usa-los. Para cada situação existe
+                            vários tipos de equipamentos para a sua segurança.
+                        </p>
+
+                        <p>
+                            <a class="btn" href="#">Veja mais detalhes »</a>
+                        </p>
+                    </div>
+
+                </div>
+                <div class="row clearfix div-c">
+
+                    <div class="col-md-10 column well">
+                        <h2>
+                            Segurança do Trabalho
+                        </h2>
+
+                        <p>
+                            Normas e regras da segurança do trabalho, conheça sobre as normas e os comportamentos
+                            existentes para anotar em suas observações no sistema de cadastramento.
+                        </p>
+
+                        <p>
+                            <a class="btn" href="#">Veja mais detalhes »</a>
+                        </p>
+                    </div>
+                    <div class="col-md-2 column">
+                        <img alt="segurança" src="/static/img/logo.jpg" class="img-circle m"/>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+{% endblock %}

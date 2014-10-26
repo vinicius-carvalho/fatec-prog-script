@@ -1,0 +1,36 @@
+{% extends 'observacoes/base.html' %}
+{% block body %}
+
+    {% set observacoe=observacoe or None %}
+    {% set errors=errors or None %}
+
+
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6 col-md-offset-3">
+                <br/>
+
+                <div class="well">
+                    <h1 class="text-center">{% trans %}Observacoe Form{% endtrans %}</h1>
+
+
+
+
+
+                    <form action="{{ save_path }}" method="post" role="form">
+                        {{ csrf_input() }}
+
+                        {{ form_input(_('Setor'),'setor',observacoe.setor,errors.setor) }}
+                        {{ form_input(_('Linha'),'linha',observacoe.linha,errors.linha) }}
+                        {{ form_input(_('Data'),'data',observacoe.data,errors.data) }}
+                        {{ form_input(_('Comportamento'),'comportamento',observacoe.comportamento,errors.comportamento) }}
+                        {{ form_input(_('Nome'),'nome',observacoe.nome,errors.nome) }}
+                        <button type="submit" class="btn btn-success">{% trans %}Save{% endtrans %}</button>
+                    </form>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+{% endblock %}

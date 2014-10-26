@@ -1,0 +1,44 @@
+<div id="form-div" class="well">
+    <h1 class="text-center">Observacoe Form</h1>
+
+    <form role="form" ng-submit="salvar()">
+
+        <fieldset ng-disabled="salvando">
+
+            <div class="form-group " ng-class="{true:'has-error', false:''}[erros.setor!=null]">
+                <label for="setorInput" class="control-label">Setor </label>
+                <input id="setorInput" type="text" class="form-control"  ng-model="obs.setor">
+                <span class="help-block" ng-show="erros.setor ">{{ erros.setor }}</span>
+            </div>
+
+            <div class="form-group " ng-class="{true:'has-error', false:''}[erros.linha!=null]">
+                <label for="linhaInput" class="control-label">Linha </label>
+                <input id="linhaInput" type="text" class="form-control"  ng-model="obs.linha">
+                <span class="help-block" ng-show="erros.linha ">{{ erros.linha }}</span>
+            </div>
+
+            <div class="form-group " ng-class="{true:'has-error', false:''}[erros.data!=null]" >
+                <label for="dataInput" class="control-label">Data </label>
+                <input id="dataInput" type="text" class="form-control" ng-model="obs.data">
+                <span class="help-block" ng-show="erros.data ">{{ erros.data }}</span>
+            </div>
+
+            <div class="form-group " ng-class="{true:'has-error', false:''}[erros.comportamento!=null]" >
+                <label for="comportamentoInput" class="control-label">Comportamento </label>
+                <input id="comportamentoInput" type="text" class="form-control"  ng-model="obs.comportamento">
+                <span class="help-block" ng-show="erros.comportamento ">{{ erros.comportamento }}</span>
+            </div>
+
+            <div class="form-group " ng-class="{true:'has-error', false:''}[erros.nome!=null]">
+                <label for="nomeInput" class="control-label">Nome </label>
+                <input id="nomeInput" type="text" class="form-control"  ng-model="obs.nome">
+                <span class="help-block" ng-show="erros.nome ">{{ erros.nome }}</span>
+            </div>
+
+            <button type="submit" class="btn btn-success" ng-class="{disabled:salvando}">Save</button>
+            <img id="ajax-loader" src="/static/img/ajax.gif" ng-show="salvando">
+        </fieldset>
+    </form>
+
+
+</div>

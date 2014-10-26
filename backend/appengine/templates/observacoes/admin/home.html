@@ -1,0 +1,82 @@
+{% extends 'observacoes/base.html' %}
+{% block js %}
+<!--<script src="/static/js/obs.js"></script>-->
+<script src="/static/obs/js/obs.js"></script>
+
+    <script type="text/javascript">
+    var ObsApp=angular.module('ObsApp',['Obsmodulo']);
+    function ObsController($scope){
+        $scope.mostrarobsform=false;
+        $scope.obs={setor:'', linha:'',data:'',comportamento:'', nome:''};
+
+        $scope.mostrarouesconder=function(){
+            $scope.mostrarobsform=!$scope.mostrarobsform;
+        }
+
+
+
+
+    }
+
+
+
+
+    </script>
+{% endblock %}
+
+{% block body %}
+    <div class="container" ng-app="ObsApp" ng-controller="ObsController">
+        <div class="row">
+            <div class="col-md-12">
+
+                <h1>{% trans %}Observações Cadastradas {% endtrans %}  </h1>
+                <button ng-click="mostrarouesconder()"  class="btn btn-success">Nova Observação</button>
+                <hr/>
+
+                <br/>
+
+            <obsform ng-show="mostrarobsform"></obsform>
+
+                <form action="{{ busca_produtos }}" method="get">
+                    <div class="col-lg-6">
+                        <div class="input-group">
+
+                            <input type="text" class="form-control" name="busca">
+                                 <span class="input-group-btn">
+                                     <a href="observacoe/admin/home/busca_produtos">
+                                         <button type="submit" class="btn btn-default"><i
+                                                 class="glyphicon glyphicon-search"></i></button>
+                                     </a>
+                                 </span>
+                        </div>
+                    </div>
+                </form>
+                <br/>
+                <br/>
+                <br/>
+                <br/>
+
+                <h2>{% trans %}Lista de Observações{% endtrans %}</h2>
+                <table class="table table-striped table-hover">
+                    <thead>
+                    <tr>
+                        <th/>
+                        <!--<th>{% trans %}Id{% endtrans %}</th>-->
+                        <th>{% trans %}Criação no Sistema{% endtrans %}</th>
+                        <th>{% trans %}Setor{% endtrans %}</th>
+                        <th>{% trans %}Linha{% endtrans %}</th>
+                        <th>{% trans %}Data da observação{% endtrans %}</th>
+                        <th>{% trans %}Comportamento{% endtrans %}</th>
+                        <th>{% trans %}Nome{% endtrans %}</th>
+                    </tr>
+                    </thead>
+                    <tbody id="corpo-tabela">
+
+
+                    </tbody>
+
+                </table>
+            </div>
+        </div>
+    </div>
+{% endblock %}

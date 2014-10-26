@@ -1,0 +1,81 @@
+.footer {
+    margin-top: 30px;
+    padding-top: 10px;
+    bottom: 0;
+    width: 100%;
+    /* Set the fixed height of the footer here */
+    height: 60px;
+    border-top: solid #DDDDDD 1px;
+    background-color: #f5f5f5;
+}
+
+
+ .mcarrossel{
+     margin: 10px;
+ }
+
+ .mimg{
+     width: 100%;
+ }
+.bl{
+color: #000;
+font-weight: bold;
+background: #d7d7d3;
+border-radius: 10px;
+border: solid;
+}
+
+b{
+   font-weight: bold;
+}
+.t{
+    text-align: center;
+}
+
+.img-circle{
+    border-radius: 50%;
+}
+
+.co {
+    width: 1130px;
+    height: 300px;
+    position: relative;
+    left: 14%;
+    margin-left: -150px;
+}
+.bor{
+
+	border: 1px solid #888;
+}
+
+
+.m{
+	margin-top: 30px;
+    margin-left: 50px;
+   border: solid 2px #d4d4d4;
+
+
+}
+.m-l{
+
+    margin-top: 30px;
+    margin-left: -50px;
+    border: solid 2px #d4d4d4;
+}
+
+
+.div-m{
+
+	margin: 10px;
+	padding: 50px;
+    margin-left: 30px;
+}
+
+.div-c{
+
+	margin: 10px;
+	padding: 50px;
+    margin-left: -12px;
+}
+
+
